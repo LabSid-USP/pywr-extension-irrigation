@@ -26,39 +26,20 @@ from pywr.core import Model, Input, Output
 from pywr.core import *
 from pywr.nodes import *
 from pywr.recorders import NumpyArrayNodeRecorder, ParameterRecorder, Recorder, NumpyArrayParameterRecorder
-import pandas as pd
-import numpy as np
-from pandas import read_csv
 from pywr.model import Model
 from pywr.nodes import Node, Link, Output
-from pcraster import *
 import os
-import configparser
-import numpy as np
-import openpyxl
-from openpyxl import load_workbook
-import pandas as pd
-from pcraster.framework import dynamicBase
-from pcraster.framework import *
-from pcraster import *
-import pcraster as pcr
 
-configFile = "D:/ACQUANET/Artigo/17.ini"
-# Leitura de arquivo config.ini
-config = configparser.ConfigParser()
-config.read(configFile)
-outpath = config.get('FILES', 'output')
-flag_sub= config.getboolean('ALLOCATION', 'Flag_sub')
 
-#mymodel = Model.load("D:/ACQUANET/Artigo/rede_IRRIGACAO.json")
-mymodel = Model.load("D:/ACQUANET/Artigo/rodaks.json")
+
+mymodel = Model.load("Rede.json")
+
 mymodel.run()
-if config.getboolean('ALLOCATION', 'Flag_irri'):   
-    try:
+try:
         r1 = mymodel.nodes["Rsl_1"]
-    except KeyError:
+except KeyError:
         print("Not found")
-    else:
+else:
         nam1=(f"name: {r1.name}")
         min_volum1=((r1.min_volume))
         init_vo1=((r1.initial_volume))
@@ -72,11 +53,11 @@ if config.getboolean('ALLOCATION', 'Flag_irri'):
         
         print(nam1,min_volum1,init_vo1,maxvol1,uin1,dg1,airr1,wp1,fc1)
         
-    try:
+try:
         r2 = mymodel.nodes["Rsl_2"]
-    except KeyError:
+except KeyError:
         print("Not found")
-    else:
+else:
         nam2=(f"name: {r2.name}")
         min_volum2=((r2.min_volume))
         init_vo2=((r2.initial_volume))
@@ -89,11 +70,11 @@ if config.getboolean('ALLOCATION', 'Flag_irri'):
         fc2=((r2.FC.get_constant_value()))
         print(nam2,min_volum2,init_vo2,maxvol2,uin2,dg2,airr2,wp2,fc2)
 
-    try:
+try:
         r3 = mymodel.nodes["Rsl_3"]
-    except KeyError:
+except KeyError:
         print("Not found")
-    else:
+else:
         nam3=(f"name: {r3.name}")
         min_volum3=((r3.min_volume))
         init_vo3=((r3.initial_volume))
@@ -106,71 +87,3 @@ if config.getboolean('ALLOCATION', 'Flag_irri'):
         fc3=((r3.FC.get_constant_value()))
 
         print(nam3,min_volum3,init_vo3,maxvol3,uin3,dg3,airr3,wp3,fc3)
-    try:
-        r20 = mymodel.recorders["vol1"]
-    except KeyError:
-        print("Not found")
-    else:
-         def11=pd.DataFrame(r20.data)
-         def11.to_csv('D:/ACQUANET/Artigo/vol1.csv', mode='a', index=False, header=False)
-         print("voluem")
-         print(r20.data)
-    try:
-        r21 = mymodel.recorders["vol2"]
-    except KeyError:
-        print("Not found")
-    else:
-         def21=pd.DataFrame(r21.data)
-         def21.to_csv('D:/ACQUANET/Artigo/vol2.csv', mode='a', index=False, header=False)
-
-    try:
-        r22 = mymodel.recorders["vol3"]
-    except KeyError:
-        print("Not found")
-    else:
-         def22=pd.DataFrame(r22.data)
-         def22.to_csv('D:/ACQUANET/Artigo/vol3.csv', mode='a', index=False, header=False)
-         
-    try:
-        r20 = mymodel.recorders["def1"]
-    except KeyError:
-        print("Not found")
-    else:
-         def11=pd.DataFrame(r20.data)
-         def11.to_csv('D:/ACQUANET/Artigo/def1.csv', mode='a', index=False, header=False)
-    try:
-        r21 = mymodel.recorders["def2"]
-    except KeyError:
-        print("Not found")
-    else:
-         def21=pd.DataFrame(r21.data)
-         def21.to_csv('D:/ACQUANET/Artigo/def2.csv', mode='a', index=False, header=False)
-
-    try:
-        r22 = mymodel.recorders["def3"]
-    except KeyError:
-        print("Not found")
-    else:
-         def22=pd.DataFrame(r22.data)
-         def22.to_csv('D:/ACQUANET/Artigo/def3.csv', mode='a', index=False, header=False)
-
-
-    try:
-        r34 = mymodel.recorders["par1"]
-    except KeyError:
-        print("Not found")
-    else:
-        print("par1")
-        print(r34.data)
-
-
-    
-if config.getboolean('ALLOCATION', 'Flag_sub'): 
-    dfsub = pd.read_csv("D:/ACQUANET/Artigo/results.csv",  sep=",")
-    dfsub.to_csv('D:/ACQUANET/Artigo/resultssubfim.csv', mode='a', index=False, header=False)
-    
-    
-
-dfcapf = pd.read_csv("D:/ACQUANET/Artigo/resultscapt.csv",  sep=",")
-dfcapf.to_csv('D:/ACQUANET/Artigo/resultscaptfim.csv', mode='a', index=False, header=False)
-
