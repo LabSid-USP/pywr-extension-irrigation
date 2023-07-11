@@ -45,18 +45,13 @@ class VIRN(Parameter):
         Eta_ini = self.parameters.get_value(scenario_index)
         Prec_ini = self.Prec.get_value(scenario_index)
         AS_ini=self.AS.volume[scenario_index.global_id]
-        if Eta_ini-Prec_ini-AS_ini<=0:
+        if Eta_ini-Prec_ini-((AS_ini*4)*self.f)<=0:
             total=0.0
         else:
-            total=Eta_ini-Prec_ini-AS_ini
+            total=(Eta_ini-Prec_ini-((AS_ini*4)*self.f))/self.ef
         
-        ref=(self.AS.max_volume*self.f)
-        if (total/4) < ref:
-            total_fim = total/self.ef
-        else:
-            total_fim=(ref*4)/self.ef
-      
-        return total_fim
+     
+        return total
 
 
         
@@ -71,64 +66,6 @@ class VIRN(Parameter):
         return cls(model, Eta, Prec, AS,f, ef, **data)
 
 VIRN.register()
-
-
-
-
-class VolAd(Parameter):
-    """
-    Maximum volume for aditional storage monthly calculatio
-
-    Parameters
-    ----------
-    node: Node
-        Soil Reservoir node to provide input volume values to interpolation calculation
-   
-    """
-    def __init__(self, model, node, **kwargs):
-        super().__init__(model, **kwargs)
-        self.node=node
-            
-    def value(self, timestep, scenario_index):
-        Vol=self.node.max_volume
-          
-        return Vol*3
-
-    @classmethod
-    def load(cls, model, data):
-        node = model.nodes[data.pop("node")]
-        return cls(model, node, **data)
-
-VolAd.register()
-
-
-class spill(Parameter):
-    def __init__(self, model, Eta, Prec, AS, **kwargs):
-        super().__init__(model, **kwargs)
-        self.parameters = Eta
-        self.Prec=Prec
-        self.AS=AS
-            
-    def value(self, timestep, scenario_index):
-        Eta_ini = self.parameters.get_value(scenario_index)
-        Prec_ini = self.Prec.get_value(scenario_index)
-        AS_ini=self.AS.volume[scenario_index.global_id]
-        ref=self.AS.max_volume
-        if AS_ini<ref:
-            total=Prec_ini-Eta_ini-(ref-AS_ini)
-        else:
-            total=Prec_ini-Eta_ini
-        
-        return total
-
-    @classmethod
-    def load(cls, model, data):
-        Eta = load_parameter(model,data.pop("eta"))
-        Prec = load_parameter(model,data.pop("prec"))
-        AS = model.nodes[data.pop("AS")]
-        return cls(model, Eta, Prec, AS, **data)
-
-spill.register()
 
 
 class Evapotranspiration(Parameter):
@@ -159,7 +96,7 @@ class Evapotranspiration(Parameter):
         Etp_ini = self.parameters.get_value(scenario_index)
         kc_ref = self.kc.get_value(scenario_index)
         ks_ref = self.ks.get_value(scenario_index)
-        Et_ini= (Etp_ini*kc_ref)-(Etp_ini*kc_ref*ks_ref)
+        Et_ini= Etp_ini*kc_ref*ks_ref
         if Et_ini<=0:
             Et=0.0
         else:

@@ -167,7 +167,7 @@ class Storage2(Loadable, Drawable, Connectable, _core.Storage, metaclass=NodeMet
             return parameter.get_constant_value() if isinstance(parameter, Parameter) else parameter
         self.min_volume = ((((_get_value(self.WP))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))
         self.max_volume = ((((_get_value(self.FC)-_get_value(self.WP))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))      
-        #self.initial_volume = ((((_get_value(self.Uin)-_get_value(self.WP))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))
+        self.initial_volume = ((((_get_value(self.Uin)-_get_value(self.WP))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))
             
         super().setup(model)
 
