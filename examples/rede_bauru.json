@@ -1,19 +1,17 @@
 {
-    "metadata": {
-        "title": "Irrigation Test",
-        "description": "A model with CHARH demands irrigation",
-        "minimum_version": "0.1"
-    },
-    "timestepper": {
-        "start": "2000-02-01",
-        "end": "2000-08-01",
-        "timestep": "M"
-    },
-    
-    "solver": {
-      "name": "lpsolve"
-    },
-
+  "metadata": {
+    "title": "Irrigation Test",
+    "description": "A model with CHARH demands irrigation",
+    "minimum_version": "0.1"
+  },
+  "timestepper": {
+    "start": "2000-02-01",
+    "end": "2000-08-01",
+    "timestep": "M"
+  },
+  "solver": {
+    "name": "lpsolve"
+  },
   "nodes": [
     {
       "name": "Sub_1",
@@ -770,7 +768,6 @@
         ]
       }
     },
-
     {
       "name": "Rural_2",
       "type": "output",
@@ -1007,12 +1004,11 @@
         ]
       }
     },
-
     {
       "name": "Supply_city",
       "type": "output",
       "max_flow": 1607040,
-      "cost":-999.0,
+      "cost": -999.0,
       "position": {
         "editor_position": [
           1120.38657,
@@ -1020,30 +1016,46 @@
         ]
       }
     },
-
     {
       "name": "Aquifer",
-      "type": "Aquifer_aquanet",
-      "num_streams":1,
-      "num_additional_inputs":1,
-      "stream_flow_levels":[[100.0, 125.0]],
-      "transmissivity":[30, 50],
-      "levels":[0.0, 100.0],
-      "storativity":[0.165],
-      "volumes": [32000000, 511931270],
+      "type": "AquiferWithoutKeatingOutflows",
+      "num_streams": 1,
+      "num_additional_inputs": 1,
+      "stream_flow_levels": [
+        [
+          100.0,
+          125.0
+        ]
+      ],
+      "transmissivity": [
+        30,
+        50
+      ],
+      "levels": [
+        0.0,
+        100.0
+      ],
+      "storativity": [
+        0.165
+      ],
+      "volumes": [
+        32000000,
+        511931270
+      ],
       "initial_volume": 49000000,
-      "min_volume":32000000,
-      "max_volume":511931270,
-      "cost":-200.0,
-      "coefficient":[1.0],
+      "min_volume": 32000000,
+      "max_volume": 511931270,
+      "cost": -200.0,
+      "coefficient": [
+        1.0
+      ],
       "area": 117000000
-
     },
     {
       "name": "19",
       "type": "output",
       "max_flow": 600.0,
-      "cost":-998.0,
+      "cost": -998.0,
       "position": {
         "editor_position": [
           1189.55713,
@@ -1055,7 +1067,7 @@
       "name": "20",
       "type": "output",
       "max_flow": 600.0,
-      "cost":-998.0,
+      "cost": -998.0,
       "position": {
         "editor_position": [
           1202.95239,
@@ -1067,7 +1079,7 @@
       "name": "18",
       "type": "output",
       "max_flow": 60.0,
-      "cost":-998.0,
+      "cost": -998.0,
       "position": {
         "editor_position": [
           895.82126,
@@ -1125,7 +1137,7 @@
       "name": "1",
       "type": "output",
       "max_flow": 15000.0,
-      "cost":-900.0,
+      "cost": -900.0,
       "position": {
         "editor_position": [
           95.9873,
@@ -1136,7 +1148,7 @@
     {
       "name": "2",
       "type": "output",
-      "cost":-900.0,
+      "cost": -900.0,
       "max_flow": 2142.00006,
       "position": {
         "editor_position": [
@@ -1148,7 +1160,7 @@
     {
       "name": "3",
       "type": "output",
-      "cost":-998.0,
+      "cost": -998.0,
       "max_flow": 270.0,
       "position": {
         "editor_position": [
@@ -1160,7 +1172,7 @@
     {
       "name": "4",
       "type": "output",
-      "cost":-950.0,
+      "cost": -950.0,
       "max_flow": 420.0,
       "position": {
         "editor_position": [
@@ -1173,7 +1185,7 @@
       "name": "5",
       "type": "output",
       "max_flow": 75.0,
-      "cost":-998.0,
+      "cost": -998.0,
       "position": {
         "editor_position": [
           417.9449,
@@ -1185,7 +1197,7 @@
       "name": "6",
       "type": "output",
       "max_flow": 255.0,
-      "cost":-900.0,
+      "cost": -900.0,
       "position": {
         "editor_position": [
           503.9336,
@@ -1196,7 +1208,7 @@
     {
       "name": "7",
       "type": "output",
-      "cost":-998.0,
+      "cost": -998.0,
       "max_flow": 105.0,
       "position": {
         "editor_position": [
@@ -1208,7 +1220,7 @@
     {
       "name": "8",
       "type": "output",
-      "cost":-950.0,
+      "cost": -950.0,
       "max_flow": 33.0,
       "position": {
         "editor_position": [
@@ -1220,7 +1232,7 @@
     {
       "name": "9",
       "type": "output",
-      "cost":-999.0,
+      "cost": -999.0,
       "max_flow": 2373.0,
       "position": {
         "editor_position": [
@@ -1233,7 +1245,7 @@
       "name": "10",
       "type": "output",
       "max_flow": 900.0,
-      "cost":-900.0,
+      "cost": -900.0,
       "position": {
         "editor_position": [
           109.98553,
@@ -1245,7 +1257,7 @@
       "name": "11",
       "type": "output",
       "max_flow": 6378.0,
-      "cost":-900.0,
+      "cost": -900.0,
       "position": {
         "editor_position": [
           203.97309,
@@ -1256,7 +1268,7 @@
     {
       "name": "12",
       "type": "output",
-      "cost":-900.0,
+      "cost": -900.0,
       "max_flow": 19878.0,
       "position": {
         "editor_position": [
@@ -1268,7 +1280,7 @@
     {
       "name": "13",
       "type": "output",
-      "cost":-900.0,
+      "cost": -900.0,
       "max_flow": 6102.0,
       "position": {
         "editor_position": [
@@ -1281,7 +1293,7 @@
       "name": "14",
       "type": "output",
       "max_flow": 2547.0,
-      "cost":-950.0,
+      "cost": -950.0,
       "position": {
         "editor_position": [
           489.9354,
@@ -1292,7 +1304,7 @@
     {
       "name": "15",
       "type": "output",
-      "cost":-900.0,
+      "cost": -900.0,
       "max_flow": 1200.0,
       "position": {
         "editor_position": [
@@ -1304,7 +1316,7 @@
     {
       "name": "16",
       "type": "output",
-      "cost":-900.0,
+      "cost": -900.0,
       "max_flow": 2142.0,
       "position": {
         "editor_position": [
@@ -1316,7 +1328,7 @@
     {
       "name": "17",
       "type": "output",
-      "cost":-900.0,
+      "cost": -900.0,
       "max_flow": 2142.0,
       "position": {
         "editor_position": [
@@ -1329,7 +1341,7 @@
       "name": "Rural_1",
       "type": "output",
       "max_flow": 3024.0,
-      "cost":-950.0,
+      "cost": -950.0,
       "position": {
         "editor_position": [
           519.9315,
@@ -1341,277 +1353,239 @@
       "name": "Catchment_Rsl_1",
       "type": "catchment",
       "flow": "Catch_Rsl_1"
-
-     },
-     
-     {
-         "name": "Rsl_1",
-         "type": "Soil_Reservoir",
-         "initial_volume": 0.0,
-         "Uin": {
-             "type": "constant",
-             "url": "data/area1.csv",
-             "sep": ",",
-             "index_col": "Date",
-             "parse_dates": true,
-             "column": "U_init",
-             "index": "2000-01-01" 
-                      
-           },
-           "dg": {
-             "type": "constant",
-             "url": "data/area1.csv",
-             "sep": ",",
-             "index_col": "Date",
-             "parse_dates": true,
-             "column": "dg",
-             "index": "2000-01-01" 
-                      
-           },
-           "Zr": {
-             "type": "constant",
-             "url": "data/area1.csv",
-             "sep": ",",
-             "index_col": "Date",
-             "parse_dates": true,
-             "column": "zr",
-             "index": "2000-01-01" 
-                      
-           },
-           "Airr": {
-             "type": "constant",
-             "url": "data/area1.csv",
-             "sep": ",",
-             "index_col": "Date",
-             "parse_dates": true,
-             "column": "area",
-             "index": "2000-01-01" 
-                      
-           },
-           "WP": {
-             "type": "constant",
-             "url": "data/area1.csv",
-             "sep": ",",
-             "index_col": "Date",
-             "parse_dates": true,
-             "column": "WP",
-             "index": "2000-01-01" 
-                      
-           },
-           "FC": {
-             "type": "constant",
-             "url": "data/area1.csv",
-             "sep": ",",
-             "index_col": "Date",
-             "parse_dates": true,
-             "column": "FC",
-             "index": "2000-01-01" 
-                      
-           },
-            "cost":"transfer_controller",
-         "outputs": 1,
-         "inputs":1
-         },
- 
-
-     {
-         "name": "Irrigation_A_1",
-         "type": "Output",
-         "max_flow": "Prev_flow_Rsl_1",
-         "cost": -990
-     },
-
-     {
-         "name": "flow_spill_Rsl_1",
-         "type": "Link",
-         "min_flow": "Prev_flow_Rsl_1",
-         "cost": -990
-     }
-     ,
-     {
-         "name": "Catchment_Rsl_2",
-         "type": "catchment",
-         "flow": "Catch_Rsl_2"
- 
-        },
-        
-        {
-            "name": "Rsl_2",
-            "type": "Soil_Reservoir",
-            "initial_volume": 955316.524,
-            "Uin": {
-                "type": "constant",
-                "url": "data/area2.csv",
-                "sep": ",",
-                "index_col": "Date",
-                "parse_dates": true,
-                "column": "U_init",
-                "index": "2000-01-01" 
-                         
-              },
-              "dg": {
-                "type": "constant",
-                "url": "data/area2.csv",
-                "sep": ",",
-                "index_col": "Date",
-                "parse_dates": true,
-                "column": "dg",
-                "index": "2000-01-01" 
-                         
-              },
-              "Zr": {
-                "type": "constant",
-                "url": "data/area2.csv",
-                "sep": ",",
-                "index_col": "Date",
-                "parse_dates": true,
-                "column": "zr",
-                "index": "2000-01-01" 
-                         
-              },
-              "Airr": {
-                "type": "constant",
-                "url": "data/area2.csv",
-                "sep": ",",
-                "index_col": "Date",
-                "parse_dates": true,
-                "column": "area",
-                "index": "2000-01-01" 
-                         
-              },
-              "WP": {
-                "type": "constant",
-                "url": "data/area2.csv",
-                "sep": ",",
-                "index_col": "Date",
-                "parse_dates": true,
-                "column": "WP",
-                "index": "2000-01-01" 
-                         
-              },
-              "FC": {
-                "type": "constant",
-                "url": "data/area2.csv",
-                "sep": ",",
-                "index_col": "Date",
-                "parse_dates": true,
-                "column": "FC",
-                "index": "2000-01-01" 
-                         
-              },
-               "cost":"transfer_controller2",
-            "outputs": 1,
-            "inputs":1
-            },
-    
-
-
-
-        {
-            "name": "Irrigation_A_2",
-            "type": "Output",
-            "max_flow": "Prev_flow_Rsl_2",
-            "cost": -990
-        },
-
-        {
-            "name": "flow_spill_Rsl_2",
-            "type": "Link",
-            "min_flow": "Prev_flow_Rsl_2",
-            "cost": -990
-        }
-        ,
-        
-        {
-            "name": "Catchment_Rsl_3",
-            "type": "catchment",
-            "flow": "Catch_Rsl_3"
-    
-           },
-           
-           {
-               "name": "Rsl_3",
-               "type": "Soil_Reservoir",
-               "initial_volume": 601946.948,
-               "Uin": {
-                   "type": "constant",
-                   "url": "data/area3.csv",
-                   "sep": ",",
-                   "index_col": "Date",
-                   "parse_dates": true,
-                   "column": "U_init",
-                   "index": "2000-01-01" 
-                            
-                 },
-                 "dg": {
-                   "type": "constant",
-                   "url": "data/area3.csv",
-                   "sep": ",",
-                   "index_col": "Date",
-                   "parse_dates": true,
-                   "column": "dg",
-                   "index": "2000-01-01" 
-                            
-                 },
-                 "Zr": {
-                   "type": "constant",
-                   "url": "data/area3.csv",
-                   "sep": ",",
-                   "index_col": "Date",
-                   "parse_dates": true,
-                   "column": "zr",
-                   "index": "2000-01-01" 
-                            
-                 },
-                 "Airr": {
-                   "type": "constant",
-                   "url": "data/area3.csv",
-                   "sep": ",",
-                   "index_col": "Date",
-                   "parse_dates": true,
-                   "column": "area",
-                   "index": "2000-01-01" 
-                            
-                 },
-                 "WP": {
-                   "type": "constant",
-                   "url": "data/area3.csv",
-                   "sep": ",",
-                   "index_col": "Date",
-                   "parse_dates": true,
-                   "column": "WP",
-                   "index": "2000-01-01" 
-                            
-                 },
-                 "FC": {
-                   "type": "constant",
-                   "url": "data/area3.csv",
-                   "sep": ",",
-                   "index_col": "Date",
-                   "parse_dates": true,
-                   "column": "FC"
-                   ,
-                   "index": "2000-01-01" 
-                 },
-                  "cost":"transfer_controller3",
-               "outputs": 1,
-               "inputs":1
-               },
-       
-   
-           {
-               "name": "Irrigation_A_3",
-               "type": "Output",
-               "max_flow": "Prev_flow_Rsl_3",
-               "cost": -990
-           },
-   
-           {
-               "name": "flow_spill_Rsl_3",
-               "type": "Link",
-               "max_flow": "Prev_flow_Rsl_3",
-               "cost": -990
-           }
+    },
+    {
+      "name": "Rsl_1",
+      "type": "SoilReservoir",
+      "initial_volume": 0.0,
+      "Uin": {
+        "type": "constant",
+        "url": "data/area1.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "U_init",
+        "index": "2000-01-01"
+      },
+      "dg": {
+        "type": "constant",
+        "url": "data/area1.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "dg",
+        "index": "2000-01-01"
+      },
+      "Zr": {
+        "type": "constant",
+        "url": "data/area1.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "zr",
+        "index": "2000-01-01"
+      },
+      "Airr": {
+        "type": "constant",
+        "url": "data/area1.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "area",
+        "index": "2000-01-01"
+      },
+      "WP": {
+        "type": "constant",
+        "url": "data/area1.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "WP",
+        "index": "2000-01-01"
+      },
+      "FC": {
+        "type": "constant",
+        "url": "data/area1.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "FC",
+        "index": "2000-01-01"
+      },
+      "cost": "transfer_controller",
+      "outputs": 1,
+      "inputs": 1
+    },
+    {
+      "name": "Irrigation_A_1",
+      "type": "Output",
+      "max_flow": "Prev_flow_Rsl_1",
+      "cost": -990
+    },
+    {
+      "name": "flow_spill_Rsl_1",
+      "type": "Link",
+      "min_flow": "Prev_flow_Rsl_1",
+      "cost": -990
+    },
+    {
+      "name": "Catchment_Rsl_2",
+      "type": "catchment",
+      "flow": "Catch_Rsl_2"
+    },
+    {
+      "name": "Rsl_2",
+      "type": "SoilReservoir",
+      "initial_volume": 955316.524,
+      "Uin": {
+        "type": "constant",
+        "url": "data/area2.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "U_init",
+        "index": "2000-01-01"
+      },
+      "dg": {
+        "type": "constant",
+        "url": "data/area2.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "dg",
+        "index": "2000-01-01"
+      },
+      "Zr": {
+        "type": "constant",
+        "url": "data/area2.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "zr",
+        "index": "2000-01-01"
+      },
+      "Airr": {
+        "type": "constant",
+        "url": "data/area2.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "area",
+        "index": "2000-01-01"
+      },
+      "WP": {
+        "type": "constant",
+        "url": "data/area2.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "WP",
+        "index": "2000-01-01"
+      },
+      "FC": {
+        "type": "constant",
+        "url": "data/area2.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "FC",
+        "index": "2000-01-01"
+      },
+      "cost": "transfer_controller2",
+      "outputs": 1,
+      "inputs": 1
+    },
+    {
+      "name": "Irrigation_A_2",
+      "type": "Output",
+      "max_flow": "Prev_flow_Rsl_2",
+      "cost": -990
+    },
+    {
+      "name": "flow_spill_Rsl_2",
+      "type": "Link",
+      "min_flow": "Prev_flow_Rsl_2",
+      "cost": -990
+    },
+    {
+      "name": "Catchment_Rsl_3",
+      "type": "catchment",
+      "flow": "Catch_Rsl_3"
+    },
+    {
+      "name": "Rsl_3",
+      "type": "SoilReservoir",
+      "initial_volume": 601946.948,
+      "Uin": {
+        "type": "constant",
+        "url": "data/area3.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "U_init",
+        "index": "2000-01-01"
+      },
+      "dg": {
+        "type": "constant",
+        "url": "data/area3.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "dg",
+        "index": "2000-01-01"
+      },
+      "Zr": {
+        "type": "constant",
+        "url": "data/area3.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "zr",
+        "index": "2000-01-01"
+      },
+      "Airr": {
+        "type": "constant",
+        "url": "data/area3.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "area",
+        "index": "2000-01-01"
+      },
+      "WP": {
+        "type": "constant",
+        "url": "data/area3.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "WP",
+        "index": "2000-01-01"
+      },
+      "FC": {
+        "type": "constant",
+        "url": "data/area3.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "FC",
+        "index": "2000-01-01"
+      },
+      "cost": "transfer_controller3",
+      "outputs": 1,
+      "inputs": 1
+    },
+    {
+      "name": "Irrigation_A_3",
+      "type": "Output",
+      "max_flow": "Prev_flow_Rsl_3",
+      "cost": -990
+    },
+    {
+      "name": "flow_spill_Rsl_3",
+      "type": "Link",
+      "max_flow": "Prev_flow_Rsl_3",
+      "cost": -990
+    }
   ],
   "edges": [
     [
@@ -1854,10 +1828,12 @@
       "L_4-5",
       "Irrigation_A_2"
     ],
-    ["Aquifer",
-    "Restr",1,null
+    [
+      "Aquifer",
+      "Restr",
+      1,
+      null
     ],
- 
     [
       "Restr",
       "19"
@@ -1870,10 +1846,12 @@
       "Restr",
       "18"
     ],
-    ["Aquifer",
-    "Terminator",0,null
+    [
+      "Aquifer",
+      "Terminator",
+      0,
+      null
     ],
-
     [
       "Recharge",
       "Aquifer"
@@ -1958,276 +1936,337 @@
       "L_34",
       "Supply_city"
     ],
-    ["Catchment_Rsl_1","Rsl_1"],
-    ["Rsl_1","flow_spill_Rsl_1"],
-    ["Catchment_Rsl_2","Rsl_2"],
-    ["Rsl_2","flow_spill_Rsl_2"],
-    ["Catchment_Rsl_3","Rsl_3"],
-    ["Rsl_3","flow_spill_Rsl_3"],
-    ["flow_spill_Rsl_1", "Terminator"],
-    ["flow_spill_Rsl_2", "Terminator"],
-    ["flow_spill_Rsl_3", "Terminator"]
-
+    [
+      "Catchment_Rsl_1",
+      "Rsl_1"
+    ],
+    [
+      "Rsl_1",
+      "flow_spill_Rsl_1"
+    ],
+    [
+      "Catchment_Rsl_2",
+      "Rsl_2"
+    ],
+    [
+      "Rsl_2",
+      "flow_spill_Rsl_2"
+    ],
+    [
+      "Catchment_Rsl_3",
+      "Rsl_3"
+    ],
+    [
+      "Rsl_3",
+      "flow_spill_Rsl_3"
+    ],
+    [
+      "flow_spill_Rsl_1",
+      "Terminator"
+    ],
+    [
+      "flow_spill_Rsl_2",
+      "Terminator"
+    ],
+    [
+      "flow_spill_Rsl_3",
+      "Terminator"
+    ]
   ],
   "tables": {},
   "parameters": {
-  
-  "Ks_1": {
-  "type": "Ks_calcp",
-  "node": "Rsl_1"      
-   
-  },
-  "Ks_2": {
-    "type": "Ks_calcp",
-    "node": "Rsl_2"      
-     
+    "Ks_1": {
+      "type": "WaterStressCoefficient",
+      "node": "Rsl_1"
+    },
+    "Ks_2": {
+      "type": "WaterStressCoefficient",
+      "node": "Rsl_2"
     },
     "Ks_3": {
-        "type": "Ks_calcp",
-        "node": "Rsl_3"      
-         
-        },
-  "Eta_Rsl_1": {                
-    "type": "Evapotranspiration",
-    "etp": "Etp_Rsl_1",
-    "kc": {
+      "type": "WaterStressCoefficient",
+      "node": "Rsl_3"
+    },
+    "Eta_Rsl_1": {
+      "type": "Evapotranspiration",
+      "etp": "Etp_Rsl_1",
+      "kc": {
         "type": "dataframe",
         "url": "data/area1.csv",
         "sep": ",",
         "index_col": "Date",
         "parse_dates": true,
-        "column": "kc"                
+        "column": "kc"
       },
-    "ks": "Ks_1",
-    "node":"Rsl_1"
-        },
-
-
-  "Prev_flow_Rsl_1": {
-      "type": "VIRN",
-      "eta":"Eta_Rsl_1",
-      "prec":"Catch_Rsl_1",
+      "ks": "Ks_1",
+      "node": "Rsl_1"
+    },
+    "Prev_flow_Rsl_1": {
+      "type": "PreliminarIrrigatedVolume",
+      "eta": "Eta_Rsl_1",
+      "prec": "Catch_Rsl_1",
       "AS": "Rsl_1",
       "f": 0.5,
-      "efic": 0.3                             
-
-  },
-
-
-
-"Catch_Rsl_1": {
-  "type": "dataframe",
-  "url": "data/area1.csv",
-  "sep": ",",
-  "index_col": "Date",
-  "parse_dates": true,
-  "column": "prec"
-},
-
-
-"control_curve": {
-  "type": "monthlyprofile",
-  "values": [0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0],
-  "is_variable": true,
-  "upper_bounds": 1.0
-},
-
-"transfer_controller": {
-  "type": "ControlCurveInterpolatedParameter",
-  "storage_node": "Rsl_1",
-  "control_curve":"control_curve",
-  "values": [10.0, -200.000001,-200.0]
-},
-
-
-
-"Eta_Rsl_2": {                
-    "type": "Evapotranspiration",
-    "etp": "Etp_Rsl_2",
-    "kc": {
+      "efic": 0.3
+    },
+    "Catch_Rsl_1": {
+      "type": "dataframe",
+      "url": "data/area1.csv",
+      "sep": ",",
+      "index_col": "Date",
+      "parse_dates": true,
+      "column": "prec"
+    },
+    "control_curve": {
+      "type": "monthlyprofile",
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "is_variable": true,
+      "upper_bounds": 1.0
+    },
+    "transfer_controller": {
+      "type": "ControlCurveInterpolatedParameter",
+      "storage_node": "Rsl_1",
+      "control_curve": "control_curve",
+      "values": [
+        10.0,
+        -200.000001,
+        -200.0
+      ]
+    },
+    "Eta_Rsl_2": {
+      "type": "Evapotranspiration",
+      "etp": "Etp_Rsl_2",
+      "kc": {
         "type": "dataframe",
         "url": "data/area2.csv",
         "sep": ",",
         "index_col": "Date",
         "parse_dates": true,
-        "column": "kc"                
+        "column": "kc"
       },
-    "ks": "Ks_2",
-    "node":"Rsl_2"
+      "ks": "Ks_2",
+      "node": "Rsl_2"
     },
-
-
-"Prev_flow_Rsl_2": {
-  "type": "VIRN",
-  "eta":"Eta_Rsl_2",
-  "prec":"Catch_Rsl_2",
-  "AS": "Rsl_1",
-  "f": 0.5,
-  "efic": 0.3                             
-
-},
-
-
-
-"Catch_Rsl_2": {
-"type": "dataframe",
-"url": "data/area2.csv",
-"sep": ",",
-"index_col": "Date",
-"parse_dates": true,
-"column": "prec"
-},
-
-
-"control_curve2": {
-"type": "monthlyprofile",
-"values": [0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0],
-"is_variable": true,
-"upper_bounds": 1.0
-},
-
-"transfer_controller2": {
-"type": "ControlCurveInterpolatedParameter",
-"storage_node": "Rsl_2",
-"control_curve":"control_curve2",
-"values": [10.0, -200.000001,-200.0]
-},
-
-"Etp_Rsl_1": {                
-  "type": "dataframe",
-  "url": "data/area1.csv",
-  "sep": ",",
-  "index_col": "Date",
-  "parse_dates": true,
-  "column": "etp"
-  
-},
-"Etp_Rsl_2": {                
-  "type": "dataframe",
-  "url": "data/area2.csv",
-  "sep": ",",
-  "index_col": "Date",
-  "parse_dates": true,
-  "column": "etp"
-  
-},
-
-"Etp_Rsl_3": {                
-  "type": "dataframe",
-  "url": "data/area3.csv",
-  "sep": ",",
-  "index_col": "Date",
-  "parse_dates": true,
-  "column": "etp"
-  
-},
-
-"Eta_Rsl_3": {                
-    "type": "Evapotranspiration",
-    "etp": "Etp_Rsl_3",
-    "kc": {
+    "Prev_flow_Rsl_2": {
+      "type": "PreliminarIrrigatedVolume",
+      "eta": "Eta_Rsl_2",
+      "prec": "Catch_Rsl_2",
+      "AS": "Rsl_1",
+      "f": 0.5,
+      "efic": 0.3
+    },
+    "Catch_Rsl_2": {
+      "type": "dataframe",
+      "url": "data/area2.csv",
+      "sep": ",",
+      "index_col": "Date",
+      "parse_dates": true,
+      "column": "prec"
+    },
+    "control_curve2": {
+      "type": "monthlyprofile",
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "is_variable": true,
+      "upper_bounds": 1.0
+    },
+    "transfer_controller2": {
+      "type": "ControlCurveInterpolatedParameter",
+      "storage_node": "Rsl_2",
+      "control_curve": "control_curve2",
+      "values": [
+        10.0,
+        -200.000001,
+        -200.0
+      ]
+    },
+    "Etp_Rsl_1": {
+      "type": "dataframe",
+      "url": "data/area1.csv",
+      "sep": ",",
+      "index_col": "Date",
+      "parse_dates": true,
+      "column": "etp"
+    },
+    "Etp_Rsl_2": {
+      "type": "dataframe",
+      "url": "data/area2.csv",
+      "sep": ",",
+      "index_col": "Date",
+      "parse_dates": true,
+      "column": "etp"
+    },
+    "Etp_Rsl_3": {
+      "type": "dataframe",
+      "url": "data/area3.csv",
+      "sep": ",",
+      "index_col": "Date",
+      "parse_dates": true,
+      "column": "etp"
+    },
+    "Eta_Rsl_3": {
+      "type": "Evapotranspiration",
+      "etp": "Etp_Rsl_3",
+      "kc": {
         "type": "dataframe",
         "url": "data/area3.csv",
         "sep": ",",
         "index_col": "Date",
         "parse_dates": true,
-        "column": "kc"                
+        "column": "kc"
       },
-    "ks": "Ks_3",
-    "node":"Rsl_3"
-    
-  
-},
-
-
-
-
-"Prev_flow_Rsl_3": {
-"type": "VIRN",
-"eta":"Eta_Rsl_1",
-"prec":"Catch_Rsl_3",
-"AS": "Rsl_3",
-"f": 0.5,
-"efic": 0.3                             
-
-},
-
-
-
-"Catch_Rsl_3": {
-"type": "dataframe",
-"url": "data/area3.csv",
-"sep": ",",
-"index_col": "Date",
-"parse_dates": true,
-"column": "prec"
-},
-
-
-
-"control_curve3": {
-"type": "monthlyprofile",
-"values": [0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0],
-"is_variable": true,
-"upper_bounds": 1.0
-},
-
-"transfer_controller3": {
-"type": "ControlCurveInterpolatedParameter",
-"storage_node": "Rsl_3",
-"control_curve":"control_curve3",
-"values": [10.0, -200.000001,-200.0]
-}
-
+      "ks": "Ks_3",
+      "node": "Rsl_3"
+    },
+    "Prev_flow_Rsl_3": {
+      "type": "PreliminarIrrigatedVolume",
+      "eta": "Eta_Rsl_1",
+      "prec": "Catch_Rsl_3",
+      "AS": "Rsl_3",
+      "f": 0.5,
+      "efic": 0.3
+    },
+    "Catch_Rsl_3": {
+      "type": "dataframe",
+      "url": "data/area3.csv",
+      "sep": ",",
+      "index_col": "Date",
+      "parse_dates": true,
+      "column": "prec"
+    },
+    "control_curve3": {
+      "type": "monthlyprofile",
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "is_variable": true,
+      "upper_bounds": 1.0
+    },
+    "transfer_controller3": {
+      "type": "ControlCurveInterpolatedParameter",
+      "storage_node": "Rsl_3",
+      "control_curve": "control_curve3",
+      "values": [
+        10.0,
+        -200.000001,
+        -200.0
+      ]
+    }
   },
   "recorders": {
-    "results":{
+    "results": {
       "type": "CSVRecorder",
-      "nodes": ["Irrigation_A_3","Rural_2","Irrigation_A_1_a","Rural_1","Irrigation_A_2","Supply_city","L_34"],
+      "nodes": [
+        "Irrigation_A_3",
+        "Rural_2",
+        "Irrigation_A_1_a",
+        "Rural_1",
+        "Irrigation_A_2",
+        "Supply_city",
+        "L_34"
+      ],
       "url": "data/resultscapt.csv"
-  },
-  "resultsaqu":{
-    "type": "CSVRecorder",
-    "nodes": ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"],
-    "url": "data/results.csv"
-},
-
-"resultirs":{
-  "type": "CSVRecorder",
-  "nodes": ["Irrigation_A_1", "flow_spill_Rsl_1","Rsl_1","Irrigation_A_2","Irrigation_A_3"],
-  "url": "data/irrigation.csv"
-
-},
-
-"vol1": {
-  "type": "NumpyArrayStorageRecorder",
-  "node": "Rsl_1"
-},
-"vol2": {
-  "type": "NumpyArrayStorageRecorder",
-  "node": "Rsl_2"
-},
-"vol3": {
-  "type": "NumpyArrayStorageRecorder",
-  "node": "Rsl_3"
-},
-"def1": {
-  "type": "NumpyArrayNodeDeficitRecorder",
-  "node": "Irrigation_A_1"
-},
-"def2": {
-  "type": "NumpyArrayNodeDeficitRecorder",
-  "node": "Irrigation_A_2"
-},
-"def3": {
-  "type": "NumpyArrayNodeDeficitRecorder",
-  "node": "Irrigation_A_3"
-},
-"par1": {
-  "type": "NumpyArrayParameterRecorder",
-  "parameter": "Ks_1"
-}
-
-
- }
+    },
+    "resultsaqu": {
+      "type": "CSVRecorder",
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "url": "data/results.csv"
+    },
+    "resultirs": {
+      "type": "CSVRecorder",
+      "nodes": [
+        "Irrigation_A_1",
+        "flow_spill_Rsl_1",
+        "Rsl_1",
+        "Irrigation_A_2",
+        "Irrigation_A_3"
+      ],
+      "url": "data/irrigation.csv"
+    },
+    "vol1": {
+      "type": "NumpyArrayStorageRecorder",
+      "node": "Rsl_1"
+    },
+    "vol2": {
+      "type": "NumpyArrayStorageRecorder",
+      "node": "Rsl_2"
+    },
+    "vol3": {
+      "type": "NumpyArrayStorageRecorder",
+      "node": "Rsl_3"
+    },
+    "def1": {
+      "type": "NumpyArrayNodeDeficitRecorder",
+      "node": "Irrigation_A_1"
+    },
+    "def2": {
+      "type": "NumpyArrayNodeDeficitRecorder",
+      "node": "Irrigation_A_2"
+    },
+    "def3": {
+      "type": "NumpyArrayNodeDeficitRecorder",
+      "node": "Irrigation_A_3"
+    },
+    "par1": {
+      "type": "NumpyArrayParameterRecorder",
+      "parameter": "Ks_1"
+    }
+  }
 }

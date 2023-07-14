@@ -6,7 +6,7 @@ import numbers
 from scipy.interpolate import interp1d
 
 
-class Aquifer_aquanet(Storage):
+class AquiferWithoutKeatingOutflows(Storage):
     def __init__(
         self,
         model,
@@ -60,7 +60,7 @@ class Aquifer_aquanet(Storage):
 
         See also documentation for the `KeatingStreamFlowParameter`.
         """
-        super(Aquifer_aquanet, self).__init__(
+        super(AquiferWithoutKeatingOutflows, self).__init__(
             model, name, inputs=(num_streams + num_additional_inputs), **kwargs
         )
 
