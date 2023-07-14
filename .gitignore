@@ -1,3 +1,12 @@
+# Visual Studio project settings
+.vs
+
+# Visual Studio Code project settings
+.vscode
+
+# JetBrains PyCharm project settings
+.idea
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
