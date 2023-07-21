@@ -6,7 +6,7 @@
   },
   "timestepper": {
     "start": "2000-02-01",
-    "end": "2000-08-01",
+    "end": "2018-08-01",
     "timestep": "M"
   },
   "solver": {
@@ -2064,7 +2064,7 @@
       "type": "PreliminarIrrigatedVolume",
       "eta": "Eta_Rsl_2",
       "prec": "Catch_Rsl_2",
-      "AS": "Rsl_1",
+      "AS": "Rsl_2",
       "f": 0.5,
       "efic": 0.3
     },
