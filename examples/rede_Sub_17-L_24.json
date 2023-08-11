@@ -395,7 +395,7 @@
     {
       "name": "flow_spill_Rsl_3",
       "type": "Link",
-      "max_flow": "Prev_flow_Rsl_3",
+      "max_flow": 1e+20,
       "cost": 990
     }
   ],
@@ -581,7 +581,7 @@
       "type": "CSVRecorder",
       "nodes": [
          "flow_spill_Rsl_3",
-        "Rsl_s",
+        "Rsl_3",
         "Irrigation_A_3"
       ],
       "url": "data/irrigation.csv"

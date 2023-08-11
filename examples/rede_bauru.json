@@ -1040,11 +1040,11 @@
       ],
       "volumes": [
         32000000,
-        511931270
+        51193127000
       ],
       "initial_volume": 49000000,
       "min_volume": 32000000,
-      "max_volume": 511931270,
+      "max_volume": 51193127000,
       "cost": -200.0,
       "coefficient": [
         1.0
@@ -1426,7 +1426,7 @@
       "name": "flow_spill_Rsl_1",
       "type": "Link",
       "min_flow": "Prev_flow_Rsl_1",
-      "cost": -990
+      "cost": 990
     },
     {
       "name": "Catchment_Rsl_2",
@@ -1505,7 +1505,7 @@
       "name": "flow_spill_Rsl_2",
       "type": "Link",
       "min_flow": "Prev_flow_Rsl_2",
-      "cost": -990
+      "cost": 990
     },
     {
       "name": "Catchment_Rsl_3",
@@ -1583,8 +1583,8 @@
     {
       "name": "flow_spill_Rsl_3",
       "type": "Link",
-      "max_flow": "Prev_flow_Rsl_3",
-      "cost": -990
+      "max_flow": 1e+20,
+      "cost": 990
     }
   ],
   "edges": [
@@ -2195,7 +2195,7 @@
       "nodes": [
         "Irrigation_A_3",
         "Rural_2",
-        "Irrigation_A_1_a",
+        "Irrigation_A_1",
         "Rural_1",
         "Irrigation_A_2",
         "Supply_city",
