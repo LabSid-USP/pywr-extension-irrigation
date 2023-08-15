@@ -5,8 +5,8 @@
     "minimum_version": "0.1"
   },
   "timestepper": {
-    "start": "2000-02-01",
-    "end": "2018-08-01",
+    "start": "2001-01-01",
+    "end": "2001-12-01",
     "timestep": "M"
   },
   "solver": {
@@ -1365,7 +1365,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "U_init",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "dg": {
         "type": "constant",
@@ -1374,7 +1374,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "dg",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "Zr": {
         "type": "constant",
@@ -1383,7 +1383,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "zr",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "Airr": {
         "type": "constant",
@@ -1392,7 +1392,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "WP": {
         "type": "constant",
@@ -1401,7 +1401,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "WP",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "FC": {
         "type": "constant",
@@ -1410,7 +1410,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "FC",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "cost": "transfer_controller",
       "outputs": 1,
@@ -1425,8 +1425,9 @@
     {
       "name": "flow_spill_Rsl_1",
       "type": "Link",
-      "min_flow": "Prev_flow_Rsl_1",
-      "cost": 990
+      "min_flow": 1.0,
+      "max_flow": 1.0e+100,
+      "cost": -990
     },
     {
       "name": "Catchment_Rsl_2",
@@ -1444,7 +1445,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "U_init",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "dg": {
         "type": "constant",
@@ -1453,7 +1454,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "dg",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "Zr": {
         "type": "constant",
@@ -1462,7 +1463,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "zr",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "Airr": {
         "type": "constant",
@@ -1471,7 +1472,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "WP": {
         "type": "constant",
@@ -1480,7 +1481,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "WP",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "FC": {
         "type": "constant",
@@ -1489,7 +1490,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "FC",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "cost": "transfer_controller2",
       "outputs": 1,
@@ -1504,8 +1505,9 @@
     {
       "name": "flow_spill_Rsl_2",
       "type": "Link",
-      "min_flow": "Prev_flow_Rsl_2",
-      "cost": 990
+      "min_flow": 1.0,
+      "max_flow": 1.0e+100,
+      "cost": -990
     },
     {
       "name": "Catchment_Rsl_3",
@@ -1523,7 +1525,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "U_init",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "dg": {
         "type": "constant",
@@ -1532,7 +1534,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "dg",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "Zr": {
         "type": "constant",
@@ -1541,7 +1543,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "zr",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "Airr": {
         "type": "constant",
@@ -1550,7 +1552,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "WP": {
         "type": "constant",
@@ -1559,7 +1561,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "WP",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "FC": {
         "type": "constant",
@@ -1568,7 +1570,7 @@
         "index_col": "Date",
         "parse_dates": true,
         "column": "FC",
-        "index": "2000-01-01"
+        "index": "2001-01-01"
       },
       "cost": "transfer_controller3",
       "outputs": 1,
@@ -1583,8 +1585,9 @@
     {
       "name": "flow_spill_Rsl_3",
       "type": "Link",
-      "max_flow": 1e+20,
-      "cost": 990
+      "min_flow": 1.0,
+      "max_flow": 1.0e+100,
+      "cost": -990
     }
   ],
   "edges": [
@@ -1987,28 +1990,7 @@
       "type": "WaterStressCoefficient",
       "node": "Rsl_3"
     },
-    "Eta_Rsl_1": {
-      "type": "Evapotranspiration",
-      "etp": "Etp_Rsl_1",
-      "kc": {
-        "type": "dataframe",
-        "url": "data/area1.csv",
-        "sep": ",",
-        "index_col": "Date",
-        "parse_dates": true,
-        "column": "kc"
-      },
-      "ks": "Ks_1",
-      "node": "Rsl_1"
-    },
-    "Prev_flow_Rsl_1": {
-      "type": "PreliminarIrrigatedVolume",
-      "eta": "Eta_Rsl_1",
-      "prec": "Catch_Rsl_1",
-      "AS": "Rsl_1",
-      "f": 0.5,
-      "efic": 0.3
-    },
+
     "Catch_Rsl_1": {
       "type": "dataframe",
       "url": "data/area1.csv",
@@ -2017,6 +1999,30 @@
       "parse_dates": true,
       "column": "prec"
     },
+    "Etp_Rsl_1": {
+        "type": "dataframe",
+        "url": "data/area1.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "etp"
+      },
+      "Etp_Rsl_2": {
+        "type": "dataframe",
+        "url": "data/area2.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "etp"
+      },
+      "Etp_Rsl_3": {
+        "type": "dataframe",
+        "url": "data/area3.csv",
+        "sep": ",",
+        "index_col": "Date",
+        "parse_dates": true,
+        "column": "etp"
+      },
     "control_curve": {
       "type": "monthlyprofile",
       "values": [
@@ -2046,6 +2052,28 @@
         -200.0
       ]
     },
+    "Eta_Rsl_1": {
+        "type": "Evapotranspiration",
+        "etp": "Etp_Rsl_1",
+        "kc": {
+          "type": "dataframe",
+          "url": "data/area1.csv",
+          "sep": ",",
+          "index_col": "Date",
+          "parse_dates": true,
+          "column": "kc"
+        },
+        "ks": "Ks_1",
+        "node": "Rsl_1"
+      },
+      "Prev_flow_Rsl_1": {
+        "type": "PreliminarIrrigatedVolume",
+        "eta": "Eta_Rsl_1",
+        "prec": "Catch_Rsl_1",
+        "AS": "Rsl_1",
+        "f": 0.5,
+        "efic": 0.3
+      },
     "Eta_Rsl_2": {
       "type": "Evapotranspiration",
       "etp": "Etp_Rsl_2",
@@ -2105,30 +2133,7 @@
         -200.0
       ]
     },
-    "Etp_Rsl_1": {
-      "type": "dataframe",
-      "url": "data/area1.csv",
-      "sep": ",",
-      "index_col": "Date",
-      "parse_dates": true,
-      "column": "etp"
-    },
-    "Etp_Rsl_2": {
-      "type": "dataframe",
-      "url": "data/area2.csv",
-      "sep": ",",
-      "index_col": "Date",
-      "parse_dates": true,
-      "column": "etp"
-    },
-    "Etp_Rsl_3": {
-      "type": "dataframe",
-      "url": "data/area3.csv",
-      "sep": ",",
-      "index_col": "Date",
-      "parse_dates": true,
-      "column": "etp"
-    },
+
     "Eta_Rsl_3": {
       "type": "Evapotranspiration",
       "etp": "Etp_Rsl_3",
@@ -2145,7 +2150,7 @@
     },
     "Prev_flow_Rsl_3": {
       "type": "PreliminarIrrigatedVolume",
-      "eta": "Eta_Rsl_1",
+      "eta": "Eta_Rsl_3",
       "prec": "Catch_Rsl_3",
       "AS": "Rsl_3",
       "f": 0.5,
@@ -2266,7 +2271,7 @@
     },
     "par1": {
       "type": "NumpyArrayParameterRecorder",
-      "parameter": "Ks_1"
+      "parameter": "Eta_Rsl_1"
     }
   }
 }

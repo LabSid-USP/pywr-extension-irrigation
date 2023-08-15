@@ -76,13 +76,16 @@ class WaterStressCoefficient(Parameter):
             CTA1=((self.cc-self.pmp)/100)*self.dg*self.zr*10
             self.z=(math.log((CAA1+1)))/(math.log((CTA1+1)))
         else:
-            AS_ini=self._node.volume[scenario_index.global_id]
-            Uin=(AS_ini*100000000)/(self._node.Zr.get_value(scenario_index)*10*0.001*self._node.Airr.get_value(scenario_index))+self._node.WP.get_value(scenario_index)
+            AS_ini_1=((self._node.volume[scenario_index.global_id])/self._node.Airr.get_value(scenario_index))*1000
+            Uin_1=((AS_ini_1*100)/(self._node.Zr.get_value(scenario_index)*10*self._node.dg.get_value(scenario_index)))
+            if Uin_1==self._node.WP.get_value(scenario_index):
+              Uin=self._node.WP.get_value(scenario_index)
+            else:
+              Uin= (self._node.WP.get_value(scenario_index)+((AS_ini_1*100)/(self._node.Zr.get_value(scenario_index)*10*self._node.dg.get_value(scenario_index))))
             CAA= ((Uin -self._node.WP.get_value(scenario_index))/100)*self._node.dg.get_value(scenario_index)*self._node.Zr.get_value(scenario_index)*10
             CTA=((self._node.FC.get_value(scenario_index)-self._node.WP.get_value(scenario_index))/100)*self._node.dg.get_value(scenario_index)*self._node.Zr.get_value(scenario_index)*10
             self.z=(math.log((CAA+1)))/(math.log((CTA+1)))
         return self.z
-
 
     @classmethod
     def load(cls, model, data):

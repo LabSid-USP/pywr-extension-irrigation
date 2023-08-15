@@ -40,15 +40,39 @@ class PreliminarIrrigatedVolume(Parameter):
         self.AS=AS
         self.f=f
         self.ef=ef
+        self.cc = self.AS.FC
+        self.pmp=self.AS.WP
+        self.dg=self.AS.dg
+        self.zr=self.AS.Zr
+        self.arr=self.AS.Airr
+        self.uin=self.AS.Uin
+        self.initial_value = self.AS.initial_volume
+
+    def setup(self):
+        super().setup()
+        self.cc = self.AS.FC
+        self.pmp=self.AS.WP
+        self.dg=self.AS.dg
+        self.zr=self.AS.Zr
+        self.arr=self.AS.Airr
+        self.uin=self.AS.Uin
+        self.initial_value = self.AS.initial_volume    
             
     def value(self, timestep, scenario_index):
         Eta_ini = self.parameters.get_value(scenario_index)
         Prec_ini = self.Prec.get_value(scenario_index)
-        AS_ini=self.AS.volume[scenario_index.global_id]
-        if Eta_ini-Prec_ini-((AS_ini*4)*self.f)<=0:
+        AS_ini_1=((self.AS.volume[scenario_index.global_id])/self.AS.Airr.get_value(scenario_index))*1000
+        Uin_1=((AS_ini_1*100)/(self.AS.Zr.get_value(scenario_index)*10*self.AS.dg.get_value(scenario_index)))
+        if Uin_1==self.AS.WP.get_value(scenario_index):
+            Uin=self.AS.WP.get_value(scenario_index)
+        else:
+          Uin= (self.AS.WP.get_value(scenario_index)+((AS_ini_1*100)/(self.AS.Zr.get_value(scenario_index)*10*self.AS.dg.get_value(scenario_index))))
+                     
+        AS_ini= ((Uin - self.AS.WP.get_value(scenario_index))/100)*(self.AS.Zr.get_value(scenario_index)*10*self.AS.dg.get_value(scenario_index))*self.AS.Airr.get_value(scenario_index)*0.001
+        if Eta_ini-Prec_ini-((AS_ini)*self.f)<=0:
             total=0.0
         else:
-            total=(Eta_ini-Prec_ini-((AS_ini*4)*self.f))/self.ef
+            total=(Eta_ini-Prec_ini-((AS_ini)*self.f))/self.ef
         
      
         return total

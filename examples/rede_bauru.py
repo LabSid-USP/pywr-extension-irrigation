@@ -2,6 +2,7 @@ import os
 import sys
 import datetime
 import pywr
+import pandas as pd
 from pywr.core import Timestepper
 from pywr.core import Model, Input, Output
 from pywr.core import *
@@ -77,3 +78,13 @@ else:
         fc3=((r3.FC.get_constant_value()))
 
         print(nam3,min_volum3,init_vo3,maxvol3,uin3,dg3,airr3,wp3,fc3)
+
+
+try:
+        r34 = mymodel.recorders["par1"]
+        #r34 = mymodel.recorders["vol1"]
+except KeyError:
+        print("Not found")
+else:
+         def22=pd.DataFrame(r34.data)
+         print(r34.data)

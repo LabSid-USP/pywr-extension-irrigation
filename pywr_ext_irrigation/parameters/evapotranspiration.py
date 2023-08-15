@@ -42,17 +42,18 @@ class Evapotranspiration(Parameter):
         self.ks = Ks
         self.kc=Kc
         self._node = node
-    
+
+         
             
     def value(self, timestep, scenario_index):
         Etp_ini = self.parameters.get_value(scenario_index)
         kc_ref = self.kc.get_value(scenario_index)
         ks_ref = self.ks.get_value(scenario_index)
-        Et_ini= Etp_ini*kc_ref*ks_ref
+        Et_ini= ((Etp_ini/self._node.Airr.get_value(scenario_index))*1000)*kc_ref*ks_ref
         if Et_ini<=0:
             Et=0.0
         else:
-            Et=Et_ini* self._node.Airr.get_value(scenario_index)*0.001*0.000001
+            Et=Et_ini*0.001*self._node.Airr.get_value(scenario_index)
         
         return Et
 
