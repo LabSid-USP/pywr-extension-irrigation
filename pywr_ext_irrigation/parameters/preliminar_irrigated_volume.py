@@ -47,6 +47,7 @@ class PreliminarIrrigatedVolume(Parameter):
         self.arr=self.AS.Airr
         self.uin=self.AS.Uin
         self.initial_value = self.AS.initial_volume
+        
 
     def setup(self):
         super().setup()
@@ -56,26 +57,61 @@ class PreliminarIrrigatedVolume(Parameter):
         self.zr=self.AS.Zr
         self.arr=self.AS.Airr
         self.uin=self.AS.Uin
-        self.initial_value = self.AS.initial_volume    
+        self.initial_value = self.AS.initial_volume   
+        self.max_volume=  self.AS.max_volume
+        
+        
             
     def value(self, timestep, scenario_index):
-        Eta_ini = self.parameters.get_value(scenario_index)
-        Prec_ini = self.Prec.get_value(scenario_index)
-        AS_ini_1=((self.AS.volume[scenario_index.global_id])/self.AS.Airr.get_value(scenario_index))*1000
-        Uin_1=((AS_ini_1*100)/(self.AS.Zr.get_value(scenario_index)*10*self.AS.dg.get_value(scenario_index)))
-        if Uin_1==self.AS.WP.get_value(scenario_index):
-            Uin=self.AS.WP.get_value(scenario_index)
+        timestep = self.model.timestepper.current        
+        Eta_ini = (self.parameters.get_value(scenario_index))
+        Prec_ini = (self.Prec.get_value(scenario_index))*(1/self.AS.days.get_value(scenario_index))
+        CTA=((self.AS.FC.get_value(scenario_index)-self.AS.WP.get_value(scenario_index))/100)*self.AS.dg.get_value(scenario_index)*self.AS.Zr.get_value(scenario_index)*10
+        if timestep== 0:
+            total=0
+            CAA1= ((self.uin-self.AS.WP.get_value(scenario_index))/100)*self.AS.dg.get_value(scenario_index)*self.AS.Zr.get_value(scenario_index)*10
+            ks=(math.log((CAA1+1)))/(math.log((CTA+1)))
+            Eta_fim=Eta_ini*ks
+            IRN= Eta_fim-Prec_ini-(CAA1*self.f)
+            if IRN + (CAA1) > (CTA)*self.f:
+                IRN= (CTA)-(CAA1)
+            else:
+                IRN=IRN
+                
+            ITN=(IRN/self.ef)*(self.AS.days.get_value(scenario_index))
+            
+            if IRN<=0:
+                total=0
+            else:
+                total=(ITN*0.001*self.AS.Airr.get_value(scenario_index))
+            
         else:
-          Uin= (self.AS.WP.get_value(scenario_index)+((AS_ini_1*100)/(self.AS.Zr.get_value(scenario_index)*10*self.AS.dg.get_value(scenario_index))))
-                     
-        AS_ini= ((Uin - self.AS.WP.get_value(scenario_index))/100)*(self.AS.Zr.get_value(scenario_index)*10*self.AS.dg.get_value(scenario_index))*self.AS.Airr.get_value(scenario_index)*0.001
-        if Eta_ini-Prec_ini-((AS_ini)*self.f)<=0:
-            total=0.0
-        else:
-            total=(Eta_ini-Prec_ini-((AS_ini)*self.f))/self.ef
-        
+            total = 0
+            AS_ini_1=(((self.AS.volume[scenario_index.global_id])/self.AS.Airr.get_value(scenario_index))*1000)/self.AS.days.get_value(scenario_index)
+            Uin_1=((AS_ini_1*100)/(self.AS.Zr.get_value(scenario_index)*10*self.AS.dg.get_value(scenario_index)))
+            if Uin_1-self.AS.WP.get_value(scenario_index)<10e-14:
+              Uin=self.AS.WP.get_value(scenario_index)
+            else:
+              Uin= Uin_1
+            CAA1= ((Uin-self.AS.WP.get_value(scenario_index))/100)*self.AS.dg.get_value(scenario_index)*self.AS.Zr.get_value(scenario_index)*10
+            ks=(math.log((CAA1+1)))/(math.log((CTA+1)))
+            Eta_fim=Eta_ini*ks
+            IRN= Eta_fim-Prec_ini-(CAA1*self.f)
+            if IRN<=0:
+                total=0                
+            else: 
+             if IRN + (CAA1) > (CTA)*self.f:
+                IRN= (CTA)-(CAA1)
+             else:
+                IRN=IRN
+                
+             ITN=(IRN/self.ef)*(self.AS.days.get_value(scenario_index))
+             total=(ITN*0.001*self.AS.Airr.get_value(scenario_index))
+            
      
+
         return total
+       
 
 
         

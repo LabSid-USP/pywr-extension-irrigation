@@ -20,7 +20,8 @@ from pywr_ext_irrigation.parameters import PreliminarIrrigatedVolume
 from pywr_ext_irrigation.parameters import WaterStressCoefficient
 
 
-mymodel = Model.load("D:/Git/pywr-extension-irrigation/examples/rede_bauru.json")
+mymodel = Model.load("D:/Git/pywr-extension-irrigation/examples/rede_bauru_fim.json")
+
 
 
 
@@ -82,7 +83,7 @@ else:
 
 try:
         r34 = mymodel.recorders["par1"]
-        #r34 = mymodel.recorders["vol1"]
+        #r34 = mymodel.recorders["vol2"]
 except KeyError:
         print("Not found")
 else:

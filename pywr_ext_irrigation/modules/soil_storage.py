@@ -72,7 +72,7 @@ class SoilStorage(Loadable, Drawable, Connectable, _core.Storage, metaclass=Node
         Optional float or Parameter defining the area and level of the storage node. These values are
         accessible through the `get_area` and `get_level` methods respectively.
     """
-    __parameter_attributes__ = ('cost', 'min_volume', 'max_volume', 'level', 'area','Uin','dg','Zr','Airr','WP','FC')
+    __parameter_attributes__ = ('cost', 'min_volume', 'max_volume', 'level', 'area','Uin','dg','Zr','Airr','WP','FC','days','f')
     __parameter_value_attributes__ = ('initial_volume', )
 
 
@@ -93,6 +93,8 @@ class SoilStorage(Loadable, Drawable, Connectable, _core.Storage, metaclass=Node
         Airr = pop_kwarg_parameter(kwargs, 'Airr', 0.0)
         WP =pop_kwarg_parameter(kwargs, 'WP', 0.0)
         FC =pop_kwarg_parameter(kwargs,'FC', 0.0)
+        days=pop_kwarg_parameter(kwargs,'days', 0.0)
+        f=pop_kwarg_parameter(kwargs,'f', 0.0)
         
       
 
@@ -119,6 +121,8 @@ class SoilStorage(Loadable, Drawable, Connectable, _core.Storage, metaclass=Node
         self.min_volume = min_volume
         self.max_volume = max_volume
         self.initial_volume = initial_volume
+        self.days=days
+        self.f=f
 
         
         # StorageOutput and StorageInput are Cython classes, which do not have
@@ -163,9 +167,12 @@ class SoilStorage(Loadable, Drawable, Connectable, _core.Storage, metaclass=Node
     def setup(self, model):
         def _get_value(parameter):
             return parameter.get_constant_value() if isinstance(parameter, Parameter) else parameter
-        self.min_volume = ((((_get_value(self.WP))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))
-        self.max_volume = ((((_get_value(self.FC)-_get_value(self.WP))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))      
-        self.initial_volume = ((((_get_value(self.Uin)-_get_value(self.WP))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))
+        #self.max_volume = ((((_get_value(self.FC)-_get_value(self.WP))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))*_get_value(self.days)
+        
+        #self.min_volume = (self.max_volume *(1-_get_value(self.f)))
+        self.min_volume = ((((_get_value(self.WP))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))*_get_value(self.days)
+        self.max_volume = ((((_get_value(self.FC))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))*_get_value(self.days)
+        self.initial_volume = ((((_get_value(self.Uin)-_get_value(self.WP))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))*_get_value(self.days)
             
         super().setup(model)
 
