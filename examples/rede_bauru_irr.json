@@ -6,7 +6,7 @@
   },
   "timestepper": {
     "start": "2001-06-01",
-    "end": "2001-08-31",
+    "end": "2010-08-31",
     "timestep": 1
   },
   "solver": {
@@ -644,7 +644,7 @@
         "Irrigation_A_2",
         "L_31"
       ],
-      "url": "data/solo/resultscapt.csv"
+      "url": "data/solo/resultscaptm1.csv"
     },
 
     "resultirs": {
