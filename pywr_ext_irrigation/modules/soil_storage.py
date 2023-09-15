@@ -172,8 +172,9 @@ class SoilStorage(Loadable, Drawable, Connectable, _core.Storage, metaclass=Node
         #self.min_volume = (self.max_volume *(1-_get_value(self.f)))
         self.min_volume = ((((_get_value(self.WP))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))*_get_value(self.days)
         self.max_volume = ((((_get_value(self.FC))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))*_get_value(self.days)
-        self.initial_volume = ((((_get_value(self.Uin)-_get_value(self.WP))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))*_get_value(self.days)
-            
+        #self.initial_volume = ((((_get_value(self.Uin)-_get_value(self.WP))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))*_get_value(self.days)
+        self.initial_volume = ((((_get_value(self.Uin))/100)*_get_value(self.dg)*_get_value(self.Zr)*10*0.001)*_get_value(self.Airr))*_get_value(self.days)
+        
         super().setup(model)
 
     def __repr__(self):
