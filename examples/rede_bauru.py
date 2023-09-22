@@ -19,11 +19,7 @@ from pywr_ext_irrigation.parameters import Evapotranspiration
 from pywr_ext_irrigation.parameters import PreliminarIrrigatedVolume
 from pywr_ext_irrigation.parameters import WaterStressCoefficient
 
-
-mymodel = Model.load("D:/Git/pywr-extension-irrigation1/examples/rede_bauru_irr.json")
-
-
-
+mymodel = Model.load("C:/workspace/pywr-extension-irrigation/examples/rede_bauru_irr.json")
 
 mymodel.run()
 
