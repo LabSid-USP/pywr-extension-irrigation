@@ -76,7 +76,7 @@
       "Uin": {
         "type": "constant",
         "url": "data/solo/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "U_init",
@@ -85,7 +85,7 @@
       "dg": {
         "type": "constant",
         "url": "data/solo/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "dg",
@@ -98,7 +98,7 @@
       "Airr": {
         "type": "constant",
         "url": "data/solo/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
@@ -107,7 +107,7 @@
       "WP": {
         "type": "constant",
         "url": "data/solo/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "WP",
@@ -116,7 +116,7 @@
       "FC": {
         "type": "constant",
         "url": "data/solo/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "FC",
@@ -155,7 +155,7 @@
       "Uin": {
         "type": "constant",
         "url": "data/solo/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "U_init",
@@ -164,7 +164,7 @@
       "dg": {
         "type": "constant",
         "url": "data/solo/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "dg",
@@ -177,7 +177,7 @@
       "Airr": {
         "type": "constant",
         "url": "data/solo/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
@@ -186,7 +186,7 @@
       "WP": {
         "type": "constant",
         "url": "data/solo/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "WP",
@@ -195,7 +195,7 @@
       "FC": {
         "type": "constant",
         "url": "data/solo/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "FC",
@@ -235,7 +235,7 @@
       "Uin": {
         "type": "constant",
         "url": "data/solo/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "U_init",
@@ -244,7 +244,7 @@
       "dg": {
         "type": "constant",
         "url": "data/solo/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "dg",
@@ -257,7 +257,7 @@
       "Airr": {
         "type": "constant",
         "url": "data/solo/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
@@ -266,7 +266,7 @@
       "WP": {
         "type": "constant",
         "url": "data/solo/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "WP",
@@ -275,7 +275,7 @@
       "FC": {
         "type": "constant",
         "url": "data/solo/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "FC",
@@ -458,7 +458,7 @@
     "Airr_1": {
         "type": "constant",
         "url": "data/solo/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
@@ -468,7 +468,7 @@
       "Airr_2": {
         "type": "constant",
         "url": "data/solo/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
@@ -478,7 +478,7 @@
       "Airr_3": {
         "type": "constant",
         "url": "data/solo/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
@@ -504,7 +504,7 @@
     "Catch_Rsl_1": {
       "type": "dataframe",
       "url": "data/solo/area1.csv",
-      "sep": ",",
+      "sep": ";",
       "index_col": "Date",
       "parse_dates": true,
       "column": "prec"
@@ -513,7 +513,7 @@
     "Catch_Rsl_2": {
         "type": "dataframe",
         "url": "data/solo/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "prec"
@@ -522,7 +522,7 @@
       "Catch_Rsl_3": {
         "type": "dataframe",
         "url": "data/solo/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "prec"
@@ -555,7 +555,7 @@
     "Etp_Rsl_1": {
         "type": "dataframe",
         "url": "data/solo/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "etp"
@@ -564,7 +564,7 @@
     "Etp_Rsl_2": {
         "type": "dataframe",
         "url": "data/solo/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "etp"
@@ -573,7 +573,7 @@
     "Etp_Rsl_3": {
         "type": "dataframe",
         "url": "data/solo/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "etp"

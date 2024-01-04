@@ -3,6 +3,7 @@ import sys
 import datetime
 import pywr
 import pandas as pd
+import numpy as np
 from pywr.core import Timestepper
 from pywr.core import Model, Input, Output
 from pywr.core import *
@@ -19,7 +20,7 @@ from pywr_ext_irrigation.parameters import Evapotranspiration
 from pywr_ext_irrigation.parameters import PreliminarIrrigatedVolume
 from pywr_ext_irrigation.parameters import WaterStressCoefficient
 
-mymodel = Model.load("C:/workspace/pywr-extension-irrigation/examples/rede_bauru_fim.json")
+mymodel = Model.load("C:/workspace/pywr-extension-irrigation/examples/rede_bauru_fim_hyc.json")
 
 mymodel.run()
 
@@ -75,8 +76,6 @@ else:
         fc3=((r3.FC.get_constant_value()))
 
         print(nam3,min_volum3,init_vo3,maxvol3,uin3,dg3,airr3,wp3,fc3)
-
-
 try:
         r34 = mymodel.recorders["par1"]
         #r34 = mymodel.recorders["vol2"]
@@ -85,3 +84,8 @@ except KeyError:
 else:
          def22=pd.DataFrame(r34.data)
          print(r34.data)
+
+# np.savetxt("def1.csv", mymodel.recorders["def1"], delimiter=',')
+# np.savetxt("def2.csv", mymodel.recorders["def2"], delimiter=',')
+# np.savetxt("def3.csv", mymodel.recorders["def3"], delimiter=',')
+

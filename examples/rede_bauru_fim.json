@@ -19,7 +19,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -42,7 +42,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -65,7 +65,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -88,7 +88,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -111,7 +111,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -134,7 +134,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -157,7 +157,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -180,7 +180,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -203,7 +203,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -226,7 +226,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -249,7 +249,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -272,7 +272,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -295,7 +295,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -318,7 +318,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -341,7 +341,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -364,7 +364,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -387,7 +387,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -410,7 +410,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -433,7 +433,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -456,7 +456,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -479,7 +479,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -632,7 +632,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -655,7 +655,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -678,7 +678,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -741,7 +741,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -796,7 +796,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -829,7 +829,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -872,7 +872,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -905,7 +905,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -928,7 +928,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -951,7 +951,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/flow.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -1093,7 +1093,7 @@
       "max_flow": {
         "type": "dataframe",
         "url": "data/rec_all.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -1116,7 +1116,7 @@
       "flow": {
         "type": "dataframe",
         "url": "data/rec_all.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": [
           "Date"
         ],
@@ -1361,7 +1361,7 @@
       "Uin": {
         "type": "constant",
         "url": "data/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "U_init",
@@ -1370,7 +1370,7 @@
       "dg": {
         "type": "constant",
         "url": "data/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "dg",
@@ -1383,7 +1383,7 @@
       "Airr": {
         "type": "constant",
         "url": "data/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
@@ -1392,7 +1392,7 @@
       "WP": {
         "type": "constant",
         "url": "data/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "WP",
@@ -1401,7 +1401,7 @@
       "FC": {
         "type": "constant",
         "url": "data/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "FC",
@@ -1440,7 +1440,7 @@
       "Uin": {
         "type": "constant",
         "url": "data/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "U_init",
@@ -1449,7 +1449,7 @@
       "dg": {
         "type": "constant",
         "url": "data/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "dg",
@@ -1462,7 +1462,7 @@
       "Airr": {
         "type": "constant",
         "url": "data/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
@@ -1471,7 +1471,7 @@
       "WP": {
         "type": "constant",
         "url": "data/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "WP",
@@ -1480,7 +1480,7 @@
       "FC": {
         "type": "constant",
         "url": "data/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "FC",
@@ -1519,7 +1519,7 @@
       "Uin": {
         "type": "constant",
         "url": "data/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "U_init",
@@ -1528,7 +1528,7 @@
       "dg": {
         "type": "constant",
         "url": "data/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "dg",
@@ -1541,7 +1541,7 @@
       "Airr": {
         "type": "constant",
         "url": "data/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
@@ -1550,7 +1550,7 @@
       "WP": {
         "type": "constant",
         "url": "data/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "WP",
@@ -1559,7 +1559,7 @@
       "FC": {
         "type": "constant",
         "url": "data/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "FC",
@@ -1980,7 +1980,7 @@
     "Airr_1": {
         "type": "constant",
         "url": "data/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
@@ -1990,7 +1990,7 @@
       "Airr_2": {
         "type": "constant",
         "url": "data/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
@@ -2000,7 +2000,7 @@
       "Airr_3": {
         "type": "constant",
         "url": "data/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "area",
@@ -2026,7 +2026,7 @@
     "Catch_Rsl_1": {
       "type": "dataframe",
       "url": "data/area1.csv",
-      "sep": ",",
+      "sep": ";",
       "index_col": "Date",
       "parse_dates": true,
       "column": "prec"
@@ -2035,7 +2035,7 @@
     "Catch_Rsl_2": {
         "type": "dataframe",
         "url": "data/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "prec"
@@ -2044,7 +2044,7 @@
       "Catch_Rsl_3": {
         "type": "dataframe",
         "url": "data/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "prec"
@@ -2077,7 +2077,7 @@
     "Etp_Rsl_1": {
         "type": "dataframe",
         "url": "data/area1.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "etp"
@@ -2086,7 +2086,7 @@
     "Etp_Rsl_2": {
         "type": "dataframe",
         "url": "data/area2.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "etp"
@@ -2095,7 +2095,7 @@
     "Etp_Rsl_3": {
         "type": "dataframe",
         "url": "data/area3.csv",
-        "sep": ",",
+        "sep": ";",
         "index_col": "Date",
         "parse_dates": true,
         "column": "etp"
