@@ -30,7 +30,7 @@ This package uses [Miniforge/Conda](https://github.com/conda-forge/miniforge) fo
 
 ## Usage
 
-The custom Pywr node can be used in water resource simulations to manage irrigation demand based on soil water balance. Below are some examples located in the `examples/` directory to help you get started.
+The Pywr irrigation extended node can be used in water resource optimization to manage irrigation demand based on soil water balance. Below are some examples located in the `examples/` directory to help you get started.
 
 ### Running the Examples
 
